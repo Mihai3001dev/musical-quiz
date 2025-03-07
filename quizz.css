@@ -1,0 +1,193 @@
+/* Reset default margin, padding, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --pageGradientBackground: linear-gradient(95deg, #4791aa, #5a9fca, #3b6693);
+    --mainButtonsColor: linear-gradient(135deg, #bc9ea3, #ff7eb3);
+    --logAndHomeButtonBackground:linear-gradient(150deg,#D9EAFD,#9AA6B2,#BCCCDC);
+  }
+
+  /* Center content */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:var(--pageGradientBackground);
+    height: 100vh;
+    font-family:Verdana,Tahoma, sans-serif;
+}
+
+/* Style for the home button */
+.homeButton {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px 30px;
+    background: var(--logAndHomeButtonBackground);
+    color: rgb(16, 16, 16);
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 6, 7, 0.5);
+
+}
+
+
+.homeButton:hover {
+    background: #1b4d7d;
+    color: #f3efda;
+}
+
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+
+span{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Style for the start button */
+.startButton {
+ 
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    background:var(--mainButtonsColor);
+    color: rgb(5, 5, 5);
+    border-radius: 25px;
+    font-size:1.5rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+
+.startButton:hover {
+    background: linear-gradient(135deg, #924065, #7f7577);
+    transform: scale(1.05);
+}
+
+/* Modal window styling */
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Modal content styling */
+.modalContent {
+    background:linear-gradient(150deg,#D9EAFD,#9AA6B2,#BCCCDC);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 20%;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+
+.closeButton {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+.closeButton:hover{
+    transform: scale(1.6);
+
+    
+}
+
+/* Styles for the quizz answer buttons */
+.optionButton {
+    display: flex;
+    margin: 10px auto;
+    padding: 10px;
+    background: #4c5f6e;
+    color: #fff6d5;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s;
+    align-items: center;
+    gap: 10px; 
+    border: none;
+    width: 100%;
+}
+
+
+.optionButton:hover {
+    background: #1a2837;
+}
+
+/* Style for the images inside answer buttons */
+.optionImage {
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%;
+}
+
+
+.loadingImage {
+    width: 50%;
+    display: block;
+    margin: 20px auto;
+    animation: fadeIn 0.5s ease-in-out;
+    border-radius: 10%;
+}
+
+/* Fade-in animation effects */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+
+/* Styling for the playlist link */
+.playlistLink {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #7c676a, #ff7eb3);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.playlistLink:hover {
+    background: linear-gradient(135deg, #531f36, #463d3f);
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+

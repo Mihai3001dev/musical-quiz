@@ -1,0 +1,100 @@
+                /* Large size(desktops) */
+@media (min-width: 1440px) {
+  
+    section.container {
+        max-width: 1200px;
+    }
+    .row {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+}
+
+              
+                /* Medium size(PC) */
+@media screen and (max-width: 1024px) {
+    body {
+        background-size: cover;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    p {
+        font-size: 1rem;
+    }
+
+    .startButton {
+        font-size: 1.1rem;
+        padding: 12px 25px;
+    }
+    .row {
+        flex-direction:column;
+    }
+    .mainImg {
+        width: 80%;
+
+    }
+    .display-5 {
+        font-size: 1.9rem;
+    }
+    .modalContent{
+        max-width: 50%;
+    }
+    
+}
+
+
+                /* Small size(tablets)*/
+@media screen and (max-width: 768px) {
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .startButton {
+        font-size: 1rem;
+        padding: 10px 20px;
+        width: 150px;
+    
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .modalContent{
+        max-width: 50%;
+    }
+    
+}
+
+
+                /*Very small size(mobile telephone)  */
+@media screen and (max-width: 480px) {
+    
+    body {
+        background-size: contain;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    .startButton {
+        font-size: 0.9rem;
+        padding: 8px 18px;
+    
+    }
+}
