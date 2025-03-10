@@ -47,41 +47,45 @@
 }
 
 
-                /* Small size(tablets)*/
-@media screen and (max-width: 768px) {
-    
+  /* Media Queries */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .mainContent {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .imageContainer, .textContainer {
+        max-width: 100%;
+    }
+
     h1 {
         font-size: 1.8rem;
     }
 
     p {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     .startButton {
         font-size: 1rem;
         padding: 10px 20px;
-        width: 150px;
-    
     }
-
-    .container {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
-    .modalContent{
-        max-width: 50%;
-    }
-    
 }
 
+@media (max-width: 480px) {
+    .logoText {
+        font-size: 1.2rem;
+    }
 
-                /*Very small size(mobile telephone)  */
-@media screen and (max-width: 480px) {
-    
-    body {
-        background-size: contain;
+    .loginButton, .signupButton {
+        font-size: 0.9rem;
+        padding: 8px 16px;
     }
 
     h1 {
@@ -89,12 +93,60 @@
     }
 
     p {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 
     .startButton {
         font-size: 0.9rem;
-        padding: 8px 18px;
-    
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .homeButton {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .startButton {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+    }
+
+    .modalContent {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .homeButton {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .startButton {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .modalContent {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .footer-content span {
+        font-size: 0.9rem;
+    }
+
+    .socialIcons svg {
+        width: 25px;
+        height: 25px;
     }
 }

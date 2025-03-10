@@ -1,108 +1,133 @@
-        *{
-            margin:0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        :root {
-            --pageGradientBackground: linear-gradient(95deg, #4791aa, #5a9fca, #3b6693);
-            --mainButtonsColor:linear-gradient(135deg, #bc9ea3, #ff7eb3);
-            --logAndHomeButtonBackground:linear-gradient(150deg,#D9EAFD,#9AA6B2,#BCCCDC);
-          }
-        
+:root {
+    --pageGradientBackground: linear-gradient(95deg, #4791aa, #5a9fca, #3b6693);
+    --mainButtonsColor: linear-gradient(135deg, #bc9ea3, #ff7eb3);
+    --logAndHomeButtonBackground: linear-gradient(150deg, #D9EAFD, #9AA6B2, #BCCCDC);
+}
 
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: var(--pageGradientBackground);
-            font-family: Verdana, sans-serif
-        }
-        
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--pageGradientBackground);
+    font-family: Verdana, sans-serif;
+    padding: 20px;
+}
 
-        #bold{
-            font-size: 2rem;
-            font-weight: bolder;
-            font-style: normal;
-        }
+/* Header*/
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
 
+.logo {
+    display: flex;
+    align-items: center;
+}
 
-        h1 {
-            font-size: 2.1rem;
-            margin-bottom: 10px;
-        }
+.logo svg {
+    height: 40px;
+}
 
+.logoText {
+    margin-left: 15px;
+    font-family: serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
 
-        p {
-            font-size: 1.7rem;
-            margin-bottom: 40px;
-            font-style: italic;
-        }
+.buttons {
+    display: flex;
+    gap: 10px;
+}
 
+.loginButton, .signupButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background: var(--logAndHomeButtonBackground);
+    font-size: 1.1rem;
+    cursor: pointer;
 
-        .startButton {
-          
-            padding: 15px 30px;
-            border: none;
-            cursor: pointer;
-            background:var(--mainButtonsColor);
-            color: rgb(16, 15, 15);
-            border-radius: 25px;
-            font-size: 1.4rem;
-            transition: all 0.3s ease;
-            text-decoration: none;
+}
 
-        }
+.loginButton:hover, .signupButton:hover {
+    background: linear-gradient(150deg, #848688, #767b80, #121313);
+    transform:scale(1.2) ;
+}
 
+/* Main Content */
+.mainContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-        .startButton:hover {
-            background: linear-gradient(135deg, #924065, #7f7577);
-            transform: scale(1.1);
-        }
+.imageContainer {
+    flex: 1;
+    max-width: 600px;
+}
 
+.mainImg {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 4px 8px 10px rgba(11, 41, 104, 0.5);
+}
 
-        svg{
-            height: 40px;
-        }
+.textContainer {
+    flex: 1;
+    max-width: 600px;
+    text-align: center;
+}
 
+h1 {
+    font-size: 2.1rem;
+    margin-bottom: 20px;
+}
 
-        .container{
-            margin-top:20px;
-            display:inline-block;
-         
-        }
-        
+p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-style: italic;
+}
 
-        .fs-4{
-            margin-left: 15px;
-            margin-right: 30px;
-            font-family:serif;
-            font-weight:600;
-    
-        }
+#bold {
+    font-size: 2rem;
+    font-weight: bolder;
+}
 
+.startButton {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    background: var(--mainButtonsColor);
+    color: rgb(16, 15, 15);
+    font-size: 1.2rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
 
-        .mainImg{
-            border-radius: 10px;
-            box-shadow:2px 4px 8px 10px rgb(11, 41, 104)
-        }
-
-
-        .loginButton,.signupButton{
-          font-size: 1.1rem;
-          background: var(--logAndHomeButtonBackground);
-         
-        }
-
-        
-  
-        
-
-
-
-
-
-       
+.startButton:hover {
+    background: linear-gradient(135deg, #924065, #7f7577);
+  transform: scale(1.4);
+}

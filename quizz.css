@@ -1,34 +1,40 @@
-/* Reset default margin, padding, and box-sizing */
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
 :root {
     --pageGradientBackground: linear-gradient(95deg, #4791aa, #5a9fca, #3b6693);
     --mainButtonsColor: linear-gradient(135deg, #bc9ea3, #ff7eb3);
-    --logAndHomeButtonBackground:linear-gradient(150deg,#D9EAFD,#9AA6B2,#BCCCDC);
-  }
+    --logAndHomeButtonBackground: linear-gradient(150deg, #D9EAFD, #9AA6B2, #BCCCDC);
+}
 
-  /* Center content */
 body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background:var(--pageGradientBackground);
-    height: 100vh;
-    font-family:Verdana,Tahoma, sans-serif;
+    background: var(--pageGradientBackground);
+    min-height: 100vh;
+    font-family: Verdana, Tahoma, sans-serif;
+    padding: 20px;
 }
 
-/* Style for the home button */
+/* Dancing Image */
+.dancingImg {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Home Button */
 .homeButton {
     position: fixed;
     top: 10px;
     right: 10px;
-    padding: 10px 30px;
+    padding: 10px 20px;
     background: var(--logAndHomeButtonBackground);
     color: rgb(16, 16, 16);
     font-weight: bold;
@@ -36,48 +42,34 @@ body {
     font-size: 16px;
     cursor: pointer;
     box-shadow: 0px 4px 6px rgba(0, 6, 7, 0.5);
-
+   
 }
-
 
 .homeButton:hover {
     background: #1b4d7d;
     color: #f3efda;
 }
 
-
-h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-
-span{
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-/* Style for the start button */
+/* Start Button */
 .startButton {
- 
     padding: 15px 30px;
     border: none;
     cursor: pointer;
-    background:var(--mainButtonsColor);
+    background: var(--mainButtonsColor);
     color: rgb(5, 5, 5);
     border-radius: 25px;
-    font-size:1.5rem;
+    font-size: 1.5rem;
     transition: all 0.3s ease;
     text-decoration: none;
+    margin-bottom: 20px;
 }
-
 
 .startButton:hover {
     background: linear-gradient(135deg, #924065, #7f7577);
     transform: scale(1.05);
 }
 
-/* Modal window styling */
+/* Modal */
 .modal {
     display: none;
     position: fixed;
@@ -92,17 +84,16 @@ span{
     transition: opacity 0.3s ease-in-out;
 }
 
-/* Modal content styling */
 .modalContent {
-    background:linear-gradient(150deg,#D9EAFD,#9AA6B2,#BCCCDC);
+    background: linear-gradient(150deg, #D9EAFD, #9AA6B2, #BCCCDC);
     padding: 20px;
     border-radius: 10px;
-    max-width: 20%;
+    max-width: 90%;
+    width: 400px;
     text-align: center;
     position: relative;
     animation: fadeIn 0.3s ease-in-out;
 }
-
 
 .closeButton {
     position: absolute;
@@ -110,16 +101,14 @@ span{
     right: 15px;
     font-size: 1.5rem;
     cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
-
-.closeButton:hover{
+.closeButton:hover {
     transform: scale(1.6);
-
-    
 }
 
-/* Styles for the quizz answer buttons */
+/* Quiz Options */
 .optionButton {
     display: flex;
     margin: 10px auto;
@@ -131,63 +120,73 @@ span{
     cursor: pointer;
     transition: 0.2s;
     align-items: center;
-    gap: 10px; 
+    gap: 10px;
     border: none;
     width: 100%;
 }
-
 
 .optionButton:hover {
     background: #1a2837;
 }
 
-/* Style for the images inside answer buttons */
 .optionImage {
-    width: 40px; 
+    width: 40px;
     height: 40px;
     border-radius: 50%;
 }
+.loadingImage{
+    height: 40px;
+    width:100px;
 
-
-.loadingImage {
-    width: 50%;
-    display: block;
-    margin: 20px auto;
-    animation: fadeIn 0.5s ease-in-out;
-    border-radius: 10%;
+}
+.playlistLink{
+    display: inline-block;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    background: var(--mainButtonsColor);
+    color: rgb(5, 5, 5);
+    border-radius: 25px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  
+   
 }
 
-/* Fade-in animation effects */
+/* Footer */
+footer {
+    width: 100%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    margin-top: auto;
+}
+
+.footerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.socialIcons {
+    display: flex;
+    gap: 10px;
+}
+
+.socialIcons a {
+    display: inline-block;
+}
+
+.socialIcons svg {
+    width: 30px;
+    height: 30px;
+}
+
+/* Animations */
 @keyframes fadeIn {
     from { opacity: 0; transform: scale(0.9); }
-    to { opacity: 1; transform: scale(1); }
+    to { opacity: 1; transform: scale(1.1); }
 }
-
-
-/* Styling for the playlist link */
-.playlistLink {
-    display: inline-block;
-    padding: 10px 20px;
-    background: linear-gradient(135deg, #7c676a, #ff7eb3);
-    color: white;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.playlistLink:hover {
-    background: linear-gradient(135deg, #531f36, #463d3f);
-    transform: scale(1.1);
-}
-
-
-
-
-
-
-
-
-
